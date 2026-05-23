@@ -17,7 +17,42 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Modern React Architecture",
-  description: "",
+  description:
+    "A presentation on modern React architecture covering Server Components, Server Actions, streaming SSR, the React Compiler, Next.js App Router, and production-ready frontend decision making.",
+  applicationName: "Modern React Architecture",
+  keywords: [
+    "React",
+    "Next.js",
+    "Server Components",
+    "Server Actions",
+    "Streaming SSR",
+    "React Compiler",
+    "Frontend Architecture",
+    "Web Performance",
+  ],
+  openGraph: {
+    title: "Modern React Architecture",
+    description:
+      "A presentation on modern React architecture covering Server Components, Server Actions, streaming SSR, the React Compiler, Next.js App Router, and production-ready frontend decision making.",
+    type: "website",
+    images: [
+      {
+        url: "https://cdn.sanity.io/media-libraries/mlu3DBU0QaKb/images/containers/3E8fHUILCJbzwK4DlOaA4pOhMqk/modern-react-architecture.png",
+        width: 1200,
+        height: 630,
+        alt: "Modern React Architecture presentation cover",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Modern React Architecture",
+    description:
+      "A presentation on modern React architecture covering Server Components, Server Actions, streaming SSR, the React Compiler, Next.js App Router, and production-ready frontend decision making.",
+    images: [
+      "https://cdn.sanity.io/media-libraries/mlu3DBU0QaKb/images/containers/3E8fHUILCJbzwK4DlOaA4pOhMqk/modern-react-architecture.png",
+    ],
+  },
 };
 
 export default function RootLayout({
