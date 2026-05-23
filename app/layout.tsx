@@ -16,10 +16,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://react.ejemeniboi.com"),
   title: "Modern React Architecture",
   description:
     "A presentation on modern React architecture covering Server Components, Server Actions, streaming SSR, the React Compiler, Next.js App Router, and production-ready frontend decision making.",
   applicationName: "Modern React Architecture",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "React",
     "Next.js",
@@ -31,6 +35,7 @@ export const metadata: Metadata = {
     "Web Performance",
   ],
   openGraph: {
+    url: "https://react.ejemeniboi.com",
     title: "Modern React Architecture",
     description:
       "A presentation on modern React architecture covering Server Components, Server Actions, streaming SSR, the React Compiler, Next.js App Router, and production-ready frontend decision making.",
