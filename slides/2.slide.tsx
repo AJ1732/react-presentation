@@ -61,7 +61,7 @@ export function Slide2() {
               <li>browser APIs</li>
               <li>client-only libraries</li>
             </ul>
-            <p className="mt-5 text-sm leading-7 text-stone-600">
+            <p className="text-sm-expand mt-5 leading-7 text-stone-600">
               It creates a server-client boundary in the module tree. Everything
               imported into that client subtree becomes part of the client side.
             </p>
@@ -97,7 +97,7 @@ export function Slide2() {
               <li>secret/API access</li>
               <li>server-side validation</li>
             </ul>
-            <p className="mt-5 text-sm leading-7 text-stone-600">
+            <p className="text-sm-expand mt-5 leading-7 text-stone-600">
               It marks server-side functions that can be called from client-side
               code, acting as a doorway back to the server.
             </p>
@@ -124,13 +124,13 @@ export function Slide2() {
           <table className="min-w-full border-collapse text-left">
             <thead>
               <tr className="bg-stone-50">
-                <th className="font-founders-grotesk-condensed px-6 py-4 text-sm tracking-[0.18em] text-stone-500 uppercase">
+                <th className="font-founders-grotesk-condensed text-sm-expand px-6 py-4 tracking-[0.18em] text-stone-500 uppercase">
                   Feature
                 </th>
-                <th className="font-founders-grotesk-condensed text-brand-600 px-6 py-4 text-sm tracking-[0.18em] uppercase">
+                <th className="font-founders-grotesk-condensed text-brand-600 text-sm-expand px-6 py-4 tracking-[0.18em] uppercase">
                   use client
                 </th>
-                <th className="font-founders-grotesk-condensed px-6 py-4 text-sm tracking-[0.18em] text-orange-600 uppercase">
+                <th className="font-founders-grotesk-condensed text-sm-expand px-6 py-4 tracking-[0.18em] text-orange-600 uppercase">
                   use server
                 </th>
               </tr>

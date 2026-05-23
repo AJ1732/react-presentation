@@ -121,11 +121,11 @@ export async function CodeWindow({
           <span className="h-3 w-3 rounded-full bg-[color-mix(in_srgb,var(--code-accent)_28%,white)] opacity-55" />
         </div>
 
-        <div className="font-founders-grotesk-condensed text-center text-sm tracking-[0.28em] text-(--code-muted) uppercase">
+        <div className="font-founders-grotesk-condensed text-sm-expand text-center tracking-[0.28em] text-(--code-muted) uppercase">
           {title}
         </div>
 
-        <div className="my-aut ml-auto w-fit rounded-full border border-(--code-border) bg-white/70 px-3 py-1 text-[10px] font-semibold tracking-[0.24em] text-(--code-accent) uppercase">
+        <div className="my-aut ml-auto w-fit rounded-full border border-(--code-border) bg-white/70 px-3 py-1 text-[max(0.625rem,0.625vw)] font-semibold tracking-[0.24em] text-(--code-accent) uppercase">
           {language}
         </div>
       </div>
@@ -150,7 +150,7 @@ export async function CodeWindow({
       </div>
 
       {caption ? (
-        <figcaption className="border-t border-(--code-border) px-5 py-4 text-sm text-(--code-muted)">
+        <figcaption className="text-sm-expand border-t border-(--code-border) px-5 py-4 text-(--code-muted)">
           {caption}
         </figcaption>
       ) : null}

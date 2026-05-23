@@ -62,7 +62,7 @@ export default function Home() {
       <Slide18 />
       <section className="content-grid snap-start space-y-8 py-16">
         <div className="max-w-3xl">
-          <p className="font-founders-grotesk-condensed text-sm tracking-[0.2em] text-stone-500 uppercase">
+          <p className="font-founders-grotesk-condensed text-sm-expand tracking-[0.2em] text-stone-500 uppercase">
             Reusable Code Window
           </p>
           <h1 className="font-founders-grotesk mt-4 text-5xl leading-none tracking-[-0.04em] sm:text-7xl">

@@ -20,13 +20,13 @@ export function Slide15() {
           <table className="min-w-full border-collapse text-left">
             <thead>
               <tr className="bg-stone-50">
-                <th className="font-founders-grotesk-condensed px-5 py-4 text-sm tracking-[0.18em] text-stone-500 uppercase">
+                <th className="font-founders-grotesk-condensed text-sm-expand px-5 py-4 tracking-[0.18em] text-stone-500 uppercase">
                   Decision
                 </th>
-                <th className="font-founders-grotesk-condensed px-5 py-4 text-sm tracking-[0.18em] text-stone-500 uppercase">
+                <th className="font-founders-grotesk-condensed text-sm-expand px-5 py-4 tracking-[0.18em] text-stone-500 uppercase">
                   Monorepo
                 </th>
-                <th className="font-founders-grotesk-condensed px-5 py-4 text-sm tracking-[0.18em] text-stone-500 uppercase">
+                <th className="font-founders-grotesk-condensed text-sm-expand px-5 py-4 tracking-[0.18em] text-stone-500 uppercase">
                   Micro-frontends
                 </th>
               </tr>
@@ -52,9 +52,7 @@ export function Slide15() {
               </tr>
               <tr className="border-t border-stone-200">
                 <td className="px-5 py-4 font-medium">Class default</td>
-                <td className="px-5 py-4">
-                  Shared UI package in a monorepo
-                </td>
+                <td className="px-5 py-4">Shared UI package in a monorepo</td>
                 <td className="px-5 py-4">
                   Use only when independent deployment is worth the cost
                 </td>

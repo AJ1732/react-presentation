@@ -70,7 +70,7 @@
 @layer components {
   .code-window {
     --code-line-height: 1.65;
-    --code-font-size: 13px;
+    --code-font-size: max(0.8125rem, 0.8125vw);
     --code-line-box: calc(var(--code-font-size) * var(--code-line-height));
     --code-block-pad-y: 1rem;
     --code-block-pad-x: 1.25rem;
@@ -102,10 +102,10 @@
 
     width: 3.125rem;
     padding-right: 1rem;
-    padding-top: 1px;
     text-align: right;
+    margin-bottom: px;
     color: var(--code-muted);
-    font-size: 12px;
+    font-size: max(0.725rem, 0.725vw);
     line-height: var(--code-line-height);
     min-height: var(--code-line-box);
     font-variant-numeric: tabular-nums;

@@ -41,7 +41,7 @@ export function Slide3() {
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
               Mutation Flow
             </h3>
-            <pre className="mt-4 overflow-x-auto font-mono text-sm leading-8 text-stone-700">
+            <pre className="text-sm-expand mt-4 overflow-x-auto font-mono leading-8 text-stone-700">
               <code>{mutationFlow}</code>
             </pre>
           </section>

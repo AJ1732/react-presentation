@@ -33,16 +33,6 @@ export function Slide6() {
             <li>Personalized sections</li>
           </ul>
         </section>
-
-        <section className="xl:col-span-2">
-          <h3 className="font-founders-grotesk text-2xl text-stone-900">
-            Teaching Line
-          </h3>
-          <p className="mt-3 max-w-3xl text-stone-600">
-            The building is ready first. The personalized furniture arrives
-            later.
-          </p>
-        </section>
       </Slide.Body>
 
       <SlideReferences

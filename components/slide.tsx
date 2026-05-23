@@ -27,7 +27,7 @@ function Eyebrow({ className, ...props }: SlideTextProps) {
   return (
     <p
       className={cn(
-        "font-founders-grotesk-condensed text-sm tracking-[0.2em] text-stone-500 uppercase",
+        "font-founders-grotesk-condensed text-sm-expand tracking-[0.2em] text-stone-500 uppercase",
         className,
       )}
       {...props}
