@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: oklch(44.4% 0.011 73.639);
+  --border: #e5e7eb;
+  --ring: #171717;
+
+  --brand-950: #000718;
+  --brand-900: #000e30;
+  --brand-800: #001c61;
+  --brand-700: #012991;
+  --brand-600: #0137c1;
+  --brand-500: #0145f2;
+  --brand-400: #346af5;
+  --brand-300: #678ff7;
+  --brand-200: #99b5fa;
+  --brand-100: #ccdafc;
+  --brand-50: #e6ecfe;
+}
+
+@theme inline {
+  /* Spacing */
+  --spacing: max(0.25vw, 0.25rem);
+
+  /* Viewport */
+  --vw: 1vw;
+  --vh: 1vh;
+
+  /* Others */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --font-founders-grotesk: var(--font-founders-grotesk);
+  --font-founders-grotesk-condensed: var(--font-founders-grotesk-condensed);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-brand-950: var(--brand-950);
+  --color-brand-900: var(--brand-900);
+  --color-brand-800: var(--brand-800);
+  --color-brand-700: var(--brand-700);
+  --color-brand-600: var(--brand-600);
+  --color-brand-500: var(--brand-500);
+  --color-brand-400: var(--brand-400);
+  --color-brand-300: var(--brand-300);
+  --color-brand-200: var(--brand-200);
+  --color-brand-100: var(--brand-100);
+  --color-brand-50: var(--brand-50);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground text-base-expand;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html {
+    @apply font-founders-grotesk;
+  }
+}
+
+@layer components {
+  .code-window {
+    --code-line-height: 1.65;
+    --code-font-size: 13px;
+    --code-line-box: calc(var(--code-font-size) * var(--code-line-height));
+    --code-block-pad-y: 1rem;
+    --code-block-pad-x: 1.25rem;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .code-window__body {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    padding-right: 1rem;
+  }
+
+  .code-window__gutter {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: color-mix(in srgb, var(--code-surface) 94%, white);
+    border-right: 1px solid var(--code-border);
+    padding-block: var(--code-block-pad-y);
+  }
+
+  .code-window__line-number {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 3.125rem;
+    padding-right: 1rem;
+    padding-top: 1px;
+    text-align: right;
+    color: var(--code-muted);
+    font-size: 12px;
+    line-height: var(--code-line-height);
+    min-height: var(--code-line-box);
+    font-variant-numeric: tabular-nums;
+    user-select: none;
+  }
+
+  .code-window__scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 0;
+  }
+
+  .code-window pre.shiki {
+    margin: 0;
+    min-width: 100%;
+    background: transparent !important;
+    padding: var(--code-block-pad-y) var(--code-block-pad-x);
+    font-size: var(--code-font-size);
+    line-height: var(--code-line-height);
+    white-space: normal;
+  }
+
+  .code-window pre.shiki code {
+    display: block;
+    min-width: max-content;
+  }
+
+  .code-window pre.shiki .line {
+    display: block;
+    min-height: var(--code-line-box);
+    white-space: pre;
+  }
+
+  .code-window pre.shiki .line:empty::after {
+    content: " ";
+  }
+}
+
+/* LAYOUT UTILITIES */
+@utility content-grid {
+  --padding-inline: max(1rem, 1vw);
+  --content-max-width: max(80rem, 80vw);
+  --breakout-max-width: max(90rem, 90vw);
+  --layout-max-width: max(90rem, 90vw);
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(var(--padding-inline), 1fr)
+    [breakout-start]
+    minmax(0, var(--breakout-size))
+    [content-start]
+    min(100% - (var(--padding-inline) * 2), var(--content-max-width))
+    [content-end]
+    minmax(0, var(--breakout-size))
+    [breakout-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
+
+  & > :not(.breakout, .full-width) {
+    grid-column: content;
+  }
+
+  & > .breakout {
+    grid-column: breakout;
+  }
+
+  & > .full-width {
+    grid-column: full-width;
+  }
+}
+
+@utility breakout {
+  .content-grid > & {
+    grid-column: breakout;
+  }
+}
+
+@utility full-width {
+  .content-grid > & {
+    grid-column: full-width;
+  }
+}
+
+/* TEXT */
+@utility text-xs-expand {
+  font-size: max(0.75rem, 0.75vw);
+}
+
+@utility text-sm-expand {
+  font-size: max(0.875rem, 0.85vw);
+}
+
+@utility text-base-expand {
+  font-size: max(1rem, 1vw);
+}
+
+@utility text-lg-expand {
+  font-size: max(1.125rem, 1.25vw);
+}
+
+@utility text-xl-expand {
+  font-size: max(1.25rem, 1.25vw);
+}
+
+@utility text-2xl-expand {
+  font-size: max(1.5rem, 1.5vw);
+}
+
+@utility text-3xl-expand {
+  font-size: max(1.875rem, 1.5vw);
+}
+
+@utility text-4xl-expand {
+  font-size: max(2.25rem, 2.25vw);
+}
+
+@utility text-5xl-expand {
+  font-size: max(3rem, 3vw);
+}
+
+@utility text-6xl-expand {
+  font-size: max(3.75rem, 3.75vw);
+}
+
+@utility text-7xl-expand {
+  font-size: max(4.5rem, 4.5vw);
+}
+
+@utility text-8xl-expand {
+  font-size: max(6rem, 6vw);
+}
+
+@utility text-9xl-expand {
+  font-size: max(8rem, 8vw);
+}
