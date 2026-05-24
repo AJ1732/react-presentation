@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const compilerConfigExample = `// next.config.ts
 import type { NextConfig } from "next";
@@ -30,33 +29,33 @@ export function Slide9() {
         />
 
         <div className="grid gap-6">
-          <section>
+          <div className="bg-stone-100 p-4 pb-3">
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
               Compiler Helps With
             </h3>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-stone-700">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-stone-700">
               <li>Re-render optimization</li>
               <li>Automatic memoization</li>
               <li>Less manual performance code</li>
             </ul>
-          </section>
+          </div>
 
-          <section>
+          <div>
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
-              Compiler Does Not Fix
+              Compiler <span className="text-red-500">Does Not</span> Fix
             </h3>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-stone-700">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-stone-700">
               <li>Bad data fetching</li>
               <li>Too much client JavaScript</li>
               <li>Poor component boundaries</li>
               <li>Slow APIs</li>
               <li>Inaccessible UI</li>
             </ul>
-          </section>
+          </div>
         </div>
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://react.dev/learn/react-compiler",

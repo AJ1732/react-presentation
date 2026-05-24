@@ -1,5 +1,4 @@
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 export function Slide15() {
   return (
@@ -62,7 +61,7 @@ export function Slide15() {
         </section>
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://vercel.com/docs/microfrontends",

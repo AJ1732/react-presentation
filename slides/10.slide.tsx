@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const appRouterTree = `app/
   layout.tsx
@@ -20,22 +19,11 @@ export function Slide10() {
       </Slide.Header>
 
       <Slide.Body className="grid gap-8 py-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-        <div className="space-y-6">
-          <p className="max-w-2xl text-stone-600">
-            The App Router organizes routing through file conventions. The
-            structure itself teaches where pages, layouts, loading states, and
-            route groups live.
-          </p>
-
-          <section>
-            <h3 className="font-founders-grotesk text-2xl text-stone-900">
-              Key Point
-            </h3>
-            <p className="mt-3 text-stone-600">
-              Show the folder tree first. Let the structure do the teaching.
-            </p>
-          </section>
-        </div>
+        <p className="max-w-2xl text-stone-600">
+          The App Router organizes routing through file conventions. The
+          structure itself teaches where pages, layouts, loading states, and
+          route groups live.
+        </p>
 
         <CodeWindow
           title="app-router-tree.txt"
@@ -45,7 +33,7 @@ export function Slide10() {
         />
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://nextjs.org/docs/app/getting-started/layouts-and-pages",

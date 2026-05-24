@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const badSuspenseExample = `<Suspense fallback={<FullPageLoader />}>
   <EntireDashboard />
@@ -57,7 +56,7 @@ export function Slide5() {
         </section>
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://nextjs.org/docs/app/getting-started/server-and-client-components",

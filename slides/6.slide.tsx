@@ -1,5 +1,4 @@
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 export function Slide6() {
   return (
@@ -35,7 +34,7 @@ export function Slide6() {
         </section>
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://react.dev/blog/2025/10/01/react-19-2",

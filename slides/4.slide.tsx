@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const streamingExample = `import { Suspense } from "react";
 
@@ -31,7 +30,7 @@ export function Slide4() {
             of waiting for the slowest child before responding.
           </p>
 
-          <section>
+          <section className="bg-stone-100 p-4">
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
               Mental Model
             </h3>
@@ -51,7 +50,7 @@ export function Slide4() {
         />
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://nextjs.org/docs/app/getting-started/server-and-client-components",

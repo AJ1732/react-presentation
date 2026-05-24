@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const dashboardLayoutExample = `export default function DashboardLayout({
   children,
@@ -52,7 +51,7 @@ export function Slide11() {
         </div>
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://nextjs.org/docs/app/getting-started/layouts-and-pages",

@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const beforeCompilerExample = `const ProductCard = memo(function ProductCard({ product }) {
   const price = useMemo(() => {
@@ -47,7 +46,7 @@ export function Slide8() {
         </div>
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://react.dev/learn/react-compiler",

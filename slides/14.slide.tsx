@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const ciExample = `name: CI
 
@@ -26,7 +25,7 @@ export function Slide14() {
       </Slide.Header>
 
       <Slide.Body className="grid gap-8 py-8">
-        <div className="grid gap-6 xl:grid-cols-3">
+        <div className="grid gap-6 xl:grid-cols-3 [&_section]:bg-stone-100 [&_section]:p-4 [&_section]:pb-3">
           <section>
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
               Profiling
@@ -67,7 +66,7 @@ export function Slide14() {
         />
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://react.dev/reference/dev-tools/react-performance-tracks",

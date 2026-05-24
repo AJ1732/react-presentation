@@ -54,12 +54,12 @@ export function Slide1() {
 
         <ul className="text-foreground mb-6 list-disc bg-stone-100 p-4 pl-6">
           <li>Should this run on the server?</li>
-          <li>Should this run in the browser</li>
-          <li>can this stream?</li>
-          <li>can this be optimized by the compiler?</li>
+          <li>Should this run in the browser/client?</li>
+          <li>Can this stream?</li>
+          <li>Can this be optimized by the compiler?</li>
         </ul>
 
-        <div className={cn("grid flex-1 grid-cols-2")}>
+        <div className={cn("grid flex-1 grid-cols-2 [&_span]:leading-none")}>
           <motion.div
             custom={0.85}
             initial="hidden"
@@ -88,7 +88,7 @@ export function Slide1() {
                 }}
                 className="text-brand-300"
               >
-                Browser
+                Browser/Client
               </motion.span>
             </PatternPanel>
           </motion.div>
@@ -128,14 +128,18 @@ export function Slide1() {
         </div>
       </Slide.Body>
 
-      <Slide.Footer className="mt-auto flex items-center gap-4 font-light">
-        <h3>References</h3>
-        <ul className="text-sm-expand flex gap-4 font-mono">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <li key={i}>[{i}]</li>
-          ))}
-        </ul>
-      </Slide.Footer>
+      <Slide.References
+        items={[
+          {
+            href: "https://react.dev/reference/rsc/server-components",
+            label: "react.dev/reference/rsc/server-components",
+          },
+          {
+            href: "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+            label: "nextjs.org/docs/app/getting-started/server-and-client-components",
+          },
+        ]}
+      />
     </Slide.Root>
   );
 }

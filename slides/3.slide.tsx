@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const mutationFlow = `User submits form
 → Server Action runs
@@ -37,7 +36,7 @@ export function Slide3() {
             authorization, persistence, and revalidation.
           </p>
 
-          <section>
+          <section className="bg-stone-100 p-4 pb-3">
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
               Mutation Flow
             </h3>
@@ -67,7 +66,7 @@ export function Slide3() {
         />
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://react.dev/reference/rsc/use-server",

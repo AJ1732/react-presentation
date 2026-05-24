@@ -125,8 +125,8 @@ export async function CodeWindow({
           {title}
         </div>
 
-        <div className="my-aut ml-auto w-fit rounded-full border border-(--code-border) bg-white/70 px-3 py-1 text-[max(0.625rem,0.625vw)] font-semibold tracking-[0.24em] text-(--code-accent) uppercase">
-          {language}
+        <div className="ml-auto grid h-6 w-fit place-items-center rounded-full border border-(--code-border) bg-white/70 px-3 text-[max(0.625rem,0.625vw)] font-semibold tracking-[0.24em] text-(--code-accent) uppercase">
+          <span className="-mb-0.5 inline-block">{language}</span>
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const prerenderExample = `import { prerender } from "react-dom/static";
 import { resume } from "react-dom/server";
@@ -44,7 +43,7 @@ export function Slide7() {
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
               Framing
             </h3>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-stone-700">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-stone-700">
               <li>`prerender` creates a prelude and postponed state</li>
               <li>`resume` continues the postponed rendering work later</li>
               <li>This is a framework-level performance capability</li>
@@ -53,7 +52,7 @@ export function Slide7() {
         </div>
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://react.dev/blog/2025/10/01/react-19-2",

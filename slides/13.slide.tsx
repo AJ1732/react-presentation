@@ -1,6 +1,5 @@
 import { CodeWindow } from "@/components/code-window";
 import { Slide } from "@/components/slide";
-import { SlideReferences } from "@/components/slide-references";
 
 const metadataExample = `export default function ProductPage() {
   return (
@@ -45,7 +44,7 @@ export function Slide13() {
         />
       </Slide.Body>
 
-      <SlideReferences
+      <Slide.References
         items={[
           {
             href: "https://react.dev/blog/2024/12/05/react-19",

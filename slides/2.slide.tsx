@@ -113,7 +113,7 @@ export function Slide2() {
           </table>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2">
           <section>
             <h3 className="font-founders-grotesk text-brand-700 text-2xl">
               &quot;use client&quot;
@@ -128,7 +128,7 @@ export function Slide2() {
               <li>browser APIs</li>
               <li>client-only libraries</li>
             </ul>
-            <p className="text-sm-expand mt-5 leading-7 text-stone-600">
+            <p className="my-5 leading-7 text-balance text-stone-600">
               It creates a server-client boundary in the module tree. Everything
               imported into that client subtree becomes part of the client side.
             </p>
@@ -164,7 +164,7 @@ export function Slide2() {
               <li>secret/API access</li>
               <li>server-side validation</li>
             </ul>
-            <p className="text-sm-expand mt-5 leading-7 text-stone-600">
+            <p className="my-5 leading-7 text-balance text-stone-600">
               It marks server-side functions that can be called from client-side
               code, acting as a doorway back to the server.
             </p>
@@ -188,41 +188,25 @@ export function Slide2() {
         </div>
       </Slide.Body>
 
-      <Slide.Footer className="mt-auto flex max-w-full items-start gap-4 font-light">
-        <h3>References</h3>
-        <ul className="text-sm-expand [&_span]:text-brand-500 flex flex-col gap-2 font-mono [&_a]:min-w-0 [&_a]:break-all [&_a]:underline-offset-4 [&_a]:hover:underline">
-          <li>
-            <a
-              href="https://nextjs.org/learn/react-foundations/server-and-client-components"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>[0]</span>{" "}
-              nextjs.org/learn/react-foundations/server-and-client-components
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://nextjs.org/docs/app/getting-started/server-and-client-components"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>[1]</span>{" "}
-              nextjs.org/docs/app/getting-started/server-and-client-components
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.reddit.com/r/nextjs/comments/1k0bddg/using_use_server_when_youre_not_supposed_to/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>[2]</span>{" "}
-              reddit.com/r/nextjs/comments/1k0bddg/using_use_server_when_youre_not_supposed_to
-            </a>
-          </li>
-        </ul>
-      </Slide.Footer>
+      <Slide.References
+        items={[
+          {
+            href: "https://nextjs.org/learn/react-foundations/server-and-client-components",
+            label:
+              "nextjs.org/learn/react-foundations/server-and-client-components",
+          },
+          {
+            href: "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+            label:
+              "nextjs.org/docs/app/getting-started/server-and-client-components",
+          },
+          {
+            href: "https://www.reddit.com/r/nextjs/comments/1k0bddg/using_use_server_when_youre_not_supposed_to/",
+            label:
+              "reddit.com/r/nextjs/comments/1k0bddg/using_use_server_when_youre_not_supposed_to",
+          },
+        ]}
+      />
     </Slide.Root>
   );
 }
