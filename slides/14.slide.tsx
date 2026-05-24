@@ -25,7 +25,7 @@ export function Slide14() {
       </Slide.Header>
 
       <Slide.Body className="grid gap-8 py-8">
-        <div className="grid gap-6 xl:grid-cols-3 [&_section]:bg-stone-100 [&_section]:p-4 [&_section]:pb-3">
+        <div className="grid gap-6 xl:grid-cols-3 [&_section]:bg-stone-100 [&_section]:p-4">
           <section>
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
               Profiling

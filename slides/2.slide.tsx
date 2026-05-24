@@ -109,82 +109,45 @@ export function Slide2() {
                   The mutation/security switch for server-owned logic.
                 </td>
               </tr>
+              <tr className="border-t border-stone-200">
+                <td className="px-6 py-4 font-medium"></td>
+                <td className="px-6 py-4">
+                  <CodeWindow
+                    title="like-button.tsx"
+                    language="tsx"
+                    code={useClientExample}
+                    caption="Interactive component rendered in the browser."
+                    theme={{
+                      panel: "#eef4ff",
+                      surface: "#f8fbff",
+                      border: "rgba(1, 69, 242, 0.12)",
+                      accent: "#0145f2",
+                      glow: "rgba(1, 69, 242, 0.18)",
+                      text: "#0f172a",
+                      muted: "#64748b",
+                    }}
+                  />
+                </td>
+                <td className="px-6 py-4">
+                  <CodeWindow
+                    title="actions.ts"
+                    language="ts"
+                    code={useServerExample}
+                    caption="Server Action for validation and persistence."
+                    theme={{
+                      panel: "#fff6ed",
+                      surface: "#fffaf5",
+                      border: "rgba(234, 88, 12, 0.14)",
+                      accent: "#f97316",
+                      glow: "rgba(249, 115, 22, 0.16)",
+                      text: "#431407",
+                      muted: "#9a3412",
+                    }}
+                  />
+                </td>
+              </tr>
             </tbody>
           </table>
-        </div>
-
-        <div className="grid gap-8 lg:grid-cols-2">
-          <section>
-            <h3 className="font-founders-grotesk text-brand-700 text-2xl">
-              &quot;use client&quot;
-            </h3>
-            <p className="mt-3 text-stone-600">
-              Use it when a component needs browser-side interactivity.
-            </p>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-stone-700">
-              <li>`useState`</li>
-              <li>`useEffect`</li>
-              <li>event handlers</li>
-              <li>browser APIs</li>
-              <li>client-only libraries</li>
-            </ul>
-            <p className="my-5 leading-7 text-balance text-stone-600">
-              It creates a server-client boundary in the module tree. Everything
-              imported into that client subtree becomes part of the client side.
-            </p>
-
-            <CodeWindow
-              title="like-button.tsx"
-              language="tsx"
-              code={useClientExample}
-              caption="Interactive component rendered in the browser."
-              theme={{
-                panel: "#eef4ff",
-                surface: "#f8fbff",
-                border: "rgba(1, 69, 242, 0.12)",
-                accent: "#0145f2",
-                glow: "rgba(1, 69, 242, 0.18)",
-                text: "#0f172a",
-                muted: "#64748b",
-              }}
-            />
-          </section>
-
-          <section className="">
-            <h3 className="font-founders-grotesk text-2xl text-orange-600">
-              &quot;use server&quot;
-            </h3>
-            <p className="mt-3 text-stone-600">
-              Use it for secure server-side actions and mutations.
-            </p>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-stone-700">
-              <li>database writes</li>
-              <li>auth checks</li>
-              <li>secure mutations</li>
-              <li>secret/API access</li>
-              <li>server-side validation</li>
-            </ul>
-            <p className="my-5 leading-7 text-balance text-stone-600">
-              It marks server-side functions that can be called from client-side
-              code, acting as a doorway back to the server.
-            </p>
-
-            <CodeWindow
-              title="actions.ts"
-              language="ts"
-              code={useServerExample}
-              caption="Server Action for validation and persistence."
-              theme={{
-                panel: "#fff6ed",
-                surface: "#fffaf5",
-                border: "rgba(234, 88, 12, 0.14)",
-                accent: "#f97316",
-                glow: "rgba(249, 115, 22, 0.16)",
-                text: "#431407",
-                muted: "#9a3412",
-              }}
-            />
-          </section>
         </div>
       </Slide.Body>
 

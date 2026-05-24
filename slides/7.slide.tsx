@@ -28,16 +28,11 @@ export function Slide7() {
         />
 
         <div className="space-y-6">
-          <section>
-            <h3 className="font-founders-grotesk text-2xl text-stone-900">
-              What to Explain
-            </h3>
-            <p className="mt-3 text-stone-600">
-              Most teams will not call these APIs directly. They matter because
-              they explain the lower-level capability that meta-frameworks can
-              build on.
-            </p>
-          </section>
+          <p className="mt-3 text-stone-600">
+            Most teams will not call these APIs directly. They matter because
+            they explain the lower-level capability that meta-frameworks can
+            build on.
+          </p>
 
           <section>
             <h3 className="font-founders-grotesk text-2xl text-stone-900">
