@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern React Architecture Presentation
 
-## Getting Started
+A slide-based presentation built with Next.js App Router for teaching modern React architecture.
 
-First, install dependencies:
+The project contains:
+
+- the presentation deck at `/`
+- a multiple-choice class activity quiz at `/quiz`
+
+## Stack
+
+- Next.js 16 App Router
+- React 19
+- Tailwind CSS v4
+- Motion
+- Shiki
+- TypeScript
+
+## Routes
+
+- `/` - presentation deck
+- `/quiz` - 10-question multiple-choice quiz with instant feedback
+
+## Local Development
+
+Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-Then run the development server:
+Start the development server:
 
 ```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run linting:
 
-## Learn More
+```bash
+pnpm lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```txt
+app/
+  layout.tsx
+  page.tsx
+  quiz/
+    page.tsx
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+components/
+  quiz/
+    quiz-game.tsx
+  animated-divider.tsx
+  code-window.tsx
+  pattern-panel.tsx
+  slide.tsx
 
-## Deploy on Vercel
+slides/
+  title.slide.tsx
+  1.slide.tsx ... 18.slide.tsx
+  index.ts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+lib/
+  quiz-data.ts
+  utils.ts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+assets/
+  fonts/
+```
+
+## How It Is Organized
+
+### Presentation
+
+The presentation deck is rendered from `app/page.tsx` using reusable slide primitives from `components/slide.tsx` and individual slide files in `slides/`.
+
+### Quiz
+
+The quiz is a standalone route at `app/quiz/page.tsx`.
+
+- question content lives in `lib/quiz-data.ts`
+- interactive quiz state and UI live in `components/quiz/quiz-game.tsx`
+
+## Notes
+
+- The deck uses server-rendered slides by default.
+- Small interactive islands are isolated into client components when needed.
+- Code examples use Shiki-based syntax highlighting via `components/code-window.tsx`.
